@@ -68,10 +68,10 @@ export default function App() {
   const [toast, setToast]         = useState(null);
   const toastTimer = useRef(null);
 
-  useEffect(() => {
-    (async () => {
-      let u = await storeGet(KEYS.users);
-      if (!u || u.length === 0) { u = INITIAL_ADMIN; await storeSet(KEYS.users, u); }
+  let u = await storeGet(KEYS.users);
+await storeSet(KEYS.users, null); // ← force reset
+u = null;
+if (!u || u.length === 0) { u = INITIAL_ADMIN; await storeSet(KEYS.users, u); }
       let e = await storeGet(KEYS.events);    if (!e) { e = []; await storeSet(KEYS.events, e); }
       let a = await storeGet(KEYS.annonces);  if (!a) { a = []; await storeSet(KEYS.annonces, a); }
       let r = await storeGet(KEYS.resources); if (!r) { r = []; await storeSet(KEYS.resources, r); }

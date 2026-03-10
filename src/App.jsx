@@ -69,8 +69,6 @@ export default function App() {
   const toastTimer = useRef(null);
 
   let u = await storeGet(KEYS.users);
-await storeSet(KEYS.users, null); // ← force reset
-u = null;
 if (!u || u.length === 0) { u = INITIAL_ADMIN; await storeSet(KEYS.users, u); }
       let e = await storeGet(KEYS.events);    if (!e) { e = []; await storeSet(KEYS.events, e); }
       let a = await storeGet(KEYS.annonces);  if (!a) { a = []; await storeSet(KEYS.annonces, a); }

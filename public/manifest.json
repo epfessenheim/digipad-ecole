@@ -1,6 +1,6 @@
 {
-  "name": "DigiPad École",
-  "short_name": "DigiPad",
+  "name": "EPPU Fessenheim",
+  "short_name": "EPPU",
   "description": "Espace collaboratif pour l'équipe enseignante — calendrier partagé, annonces et ressources.",
   "start_url": "/",
   "scope": "/",

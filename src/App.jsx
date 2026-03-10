@@ -152,7 +152,7 @@ function LoginScreen({ users, onLogin }) {
       <div style={{textAlign:"center",marginBottom:40}}>
         <div style={{fontSize:48,marginBottom:8}}>📚</div>
         <h1 style={{fontFamily:"'Playfair Display',serif",color:T.paper,fontSize:32,letterSpacing:"-1px"}}>
-          Digi<span style={{color:T.gold}}>Pad</span>
+          <span style={{color:T.gold}}>EPPU</span> Fessenheim
         </h1>
         <p style={{color:"#6b6050",fontSize:13,marginTop:4,letterSpacing:".1em",textTransform:"uppercase"}}>Espace enseignants</p>
       </div>
@@ -244,7 +244,7 @@ function TopBar({ currentUser, onLogout, reminderCount, onAdmin }) {
   return (
     <div style={{background:T.ink,color:T.paper,padding:"14px 18px",display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,zIndex:50}}>
       <div style={{fontFamily:"'Playfair Display',serif",fontSize:20,letterSpacing:"-.5px"}}>
-        📚 Digi<span style={{color:T.gold}}>Pad</span>
+        🏫 <span style={{color:T.gold}}>EPPU</span> Fessenheim
       </div>
       <div style={{display:"flex",alignItems:"center",gap:12}}>
         {reminderCount>0 && <div style={{background:T.accent,color:"white",borderRadius:20,padding:"2px 8px",fontSize:11,fontWeight:600}}>{reminderCount} rappel{reminderCount>1?"s":""}</div>}
@@ -455,7 +455,7 @@ function AdminTab({ currentUser, users, events, annonces, resources,
         <div style={{display:"flex",flexDirection:"column",gap:10}}>
           <SectionTitle dot={T.sage} title="Informations" />
           {[
-            ["Version", "DigiPad École v1.0"],
+            ["Version", "EPPU Fessenheim v1.0"],
             ["Enseignants", `${users.length} compte${users.length>1?"s":""}`],
             ["Événements", `${events.length} au total`],
             ["Annonces", `${annonces.length} publiées`],
